@@ -1,0 +1,418 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #FFFFFF;
+    color: #0A0A0A;
+  }
+
+  .font-display {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2F6B4A;
+    border-radius: 4px;
+  }
+}
+
+/* ============================================
+   COMPONENT STYLES
+   ============================================ */
+@layer components {
+  /* Animación de revelado al hacer scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Marquee superior */
+  .marquee-track {
+    display: flex;
+    animation: marquee 35s linear infinite;
+  }
+
+  /* Efecto tilt al hover */
+  .hover-tilt {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hover-tilt:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Zoom en imágenes */
+  .img-zoom {
+    overflow: hidden;
+  }
+
+  .img-zoom img {
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .img-zoom:hover img {
+    transform: scale(1.06);
+  }
+
+  /* Animaciones de modales y drawers */
+  .slide-cart {
+    animation: slideCart 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .slide-up {
+    animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .overlay {
+    animation: overlayIn 0.3s ease-out;
+  }
+
+  .toast {
+    animation: toastIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .modal-pop {
+    animation: modalPop 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Botones de formato (250g, 500g, 1kg) */
+  .fmt-btn {
+    transition: all 0.3s ease;
+  }
+
+  .fmt-btn.active {
+    background: #0B2418;
+    color: #fff;
+    border-color: #0B2418;
+  }
+
+  .fmt-btn.active .fmt-price {
+    color: #FB923C;
+  }
+
+  .fmt-btn:not(.active):hover {
+    border-color: #2F6B4A;
+  }
+
+  /* Filas de horarios */
+  .hours-row {
+    transition: all 0.3s ease;
+  }
+
+  .hours-row:hover {
+    background: #F4F9F5;
+    padding-left: 20px;
+  }
+
+  /* Patrón de puntos decorativo */
+  .dot-pattern {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .dot-pattern-light {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Chips de notas de cata */
+  .note-chip {
+    transition: all 0.3s ease;
+  }
+
+  .note-chip:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Pills de filtro */
+  .filter-pill {
+    transition: all 0.3s ease;
+  }
+
+  .filter-pill.active {
+    background: #0A0A0A;
+    color: #fff;
+  }
+
+  .filter-pill:not(.active):hover {
+    background: #F4F9F5;
+  }
+
+  /* Select personalizado */
+  .custom-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230A0A0A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 48px;
+  }
+
+  /* Logo con animación */
+  .logo-spin {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .logo-spin:hover {
+    transform: rotate(-8deg) scale(1.05);
+  }
+
+  /* Badges de categoría */
+  .cat-badge-pill {
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cat-badge-pill.active {
+    background: #0B2418;
+    color: #fff;
+    border-color: #0B2418;
+    box-shadow: 0 4px 14px rgba(11, 36, 24, 0.25);
+  }
+
+  .cat-badge-pill.active .cat-badge-count {
+    background: #FB923C;
+    color: #0B2418;
+  }
+
+  .cat-badge-pill:not(.active):hover {
+    border-color: #0B2418;
+    transform: translateY(-2px);
+  }
+
+  /* Inputs de formulario */
+  .form-input {
+    transition: all 0.3s ease;
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .form-input:focus {
+    border-color: #1B4A31;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(27, 74, 49, 0.1);
+  }
+
+  .form-input.error {
+    border-color: #EF4444;
+  }
+
+  /* Opciones de entrega */
+  .delivery-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .delivery-option.active {
+    border-color: #1B4A31;
+    background: #F4F9F5;
+  }
+
+  .delivery-option.active .opt-icon {
+    background: #1B4A31;
+    color: #fff;
+  }
+
+  /* Opciones de pago */
+  .payment-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .payment-option.active {
+    border-color: #1B4A31;
+    background: #F4F9F5;
+  }
+
+  .payment-option.active .pay-icon {
+    background: #1B4A31;
+    color: #fff;
+  }
+
+  /* Botones de cantidad */
+  .qty-btn {
+    transition: all 0.2s;
+  }
+
+  .qty-btn:hover {
+    background: #0B2418;
+    color: #fff;
+  }
+
+  /* Banner mayorista */
+  .wholesale-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0B2418 0%, #133624 50%, #0B2418 100%);
+  }
+
+  .wholesale-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(251, 146, 60, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  .wholesale-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .wholesale-benefit {
+    transition: all 0.3s ease;
+  }
+
+  .wholesale-benefit:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .wholesale-cta {
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .wholesale-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
+  }
+
+  .float-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+  }
+}
+
+/* ============================================
+   KEYFRAMES / ANIMACIONES
+   ============================================ */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideCart {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes toastIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ============================================
+   RESPONSIVE - TARJETAS DE PRODUCTO EN MÓVIL
+   ============================================ */
+@media (max-width: 767px) {
+  .product-card-mobile .product-title-m {
+    font-size: 1rem;
+  }
+
+  .product-card-mobile .product-origin-m {
+    font-size: 9px;
+  }
+
+  .product-card-mobile .product-notes-m {
+    display: none;
+  }
+
+  .product-card-mobile .product-variety-m {
+    display: none;
+  }
+
+  .product-card-mobile .product-card-body {
+    padding: 0.75rem;
+  }
+
+  .product-card-mobile .product-price-m {
+    font-size: 1.1rem;
+  }
+}

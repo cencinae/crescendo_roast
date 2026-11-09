@@ -1,0 +1,68 @@
+{
+  "whatsapp": {
+    "number": "56997327005",
+    "defaultMessage": "Hola Crescendo Roast! Quiero hacer un pedido.",
+    "b2bMessage": "Hola Crescendo Roast! Tengo una cafetería y me interesa la venta mayorista."
+  },
+  "shipping": {
+    "cost": 3500,
+    "freeThreshold": 15000,
+    "city": "Talca",
+    "region": "Región del Maule"
+  },
+  "bankAccount": {
+    "bank": "Banco Estado",
+    "accountType": "Cuenta Vista",
+    "accountNumber": "12345678901",
+    "rut": "12.345.678-9",
+    "holder": "Crescendo Roast SpA"
+  },
+  "paymentMethods": [
+    {
+      "id": "efectivo",
+      "label": "Efectivo",
+      "icon": "fa-solid fa-money-bill-wave",
+      "available": true
+    },
+    {
+      "id": "tarjeta",
+      "label": "Tarjeta",
+      "icon": "fa-solid fa-credit-card",
+      "available": true
+    },
+    {
+      "id": "transferencia",
+      "label": "Transferencia",
+      "icon": "fa-solid fa-building-columns",
+      "available": true
+    },
+    {
+      "id": "link",
+      "label": "Link de Pago",
+      "icon": "fa-solid fa-link",
+      "available": true
+    }
+  ],
+  "socials": [
+    {
+      "name": "Instagram",
+      "icon": "fa-brands fa-instagram",
+      "url": "https://www.instagram.com/crescendo_roast/"
+    },
+    {
+      "name": "Facebook",
+      "icon": "fa-brands fa-facebook-f",
+      "url": "https://www.facebook.com/crescendoroast"
+    },
+    {
+      "name": "TikTok",
+      "icon": "fa-brands fa-tiktok",
+      "url": "https://www.tiktok.com/@crescendo_roast"
+    },
+    {
+      "name": "WhatsApp",
+      "icon": "fa-brands fa-whatsapp",
+      "url": "https://wa.me/56931893121"
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+[
+  {
+    "id": 1,
+    "slug": "crescendo-blend",
+    "name": "Crescendo Blend",
+    "origin": "Blend",
+    "category": "normal",
+    "variety": "Mixto",
+    "varietyShort": "Mixto",
+    "region": "Colombia, Brasil, Etiopía",
+    "regionShort": "Multi-origen",
+    "originDetail": "Blend de cafés de Colombia, Brasil y Etiopía. Selección cuidadosa para un perfil balanceado.",
+    "process": "Mixto",
+    "altitude": "Variada",
+    "altitudeShort": "Variada",
+    "score": 85,
+    "reviews": 312,
+    "new": false,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$7.500",
+        "priceNum": 7500,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$13.000",
+        "priceNum": 13000,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$24.000",
+        "priceNum": 24000,
+        "available": false
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Chocolate, avellana, caramelo, balanceado.",
+    "fullTastingProfile": "Chocolate, avellana y caramelo. Blend balanceado ideal para el día a día. Cuerpo medio y acidez suave.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Chocolate",
+        "icon": "🍫"
+      },
+      {
+        "label": "Avellana",
+        "icon": "🌰"
+      },
+      {
+        "label": "Caramelo",
+        "icon": "🍬"
+      },
+      {
+        "label": "Balanceado",
+        "icon": "⚖️"
+      }
+    ],
+    "bodyAcidity": "Cuerpo medio, acidez suave. Blend balanceado ideal para cualquier método de preparación.",
+    "roastDate": "15 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+    "seo": {
+      "title": "Crescendo Blend - Café de Especialidad Balanceado | Crescendo Roast",
+      "description": "Blend de cafés de Colombia, Brasil y Etiopía. Chocolate, avellana y caramelo. Puntaje SCA 85. Envíos en Talca.",
+      "keywords": "café blend, café de especialidad, crescendo roast, café talca, café colombia brasil etiopía"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "brasil-espresso",
+    "name": "Brasil Espresso",
+    "origin": "Brasil",
+    "category": "normal",
+    "variety": "Espresso",
+    "varietyShort": "Espresso",
+    "region": "São Paulo, Brasil",
+    "regionShort": "São Paulo",
+    "originDetail": "Cultivado en la región de São Paulo, a altitudes de 800-1100 msnm. Zona tradicional cafetalera.",
+    "process": "Natural",
+    "altitude": "800 - 1100 msnm",
+    "altitudeShort": "800-1100",
+    "score": 85,
+    "reviews": 98,
+    "new": false,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$7.500",
+        "priceNum": 7500,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$13.000",
+        "priceNum": 13000,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$24.000",
+        "priceNum": 24000,
+        "available": true
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Chocolate amargo, tabaco fino, frutos secos.",
+    "fullTastingProfile": "Chocolate amargo, tabaco fino, frutos secos. Cuerpo denso y cremoso, baja acidez. Perfecto para espresso y métodos de presión.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Chocolate amargo",
+        "icon": "🍫"
+      },
+      {
+        "label": "Tabaco fino",
+        "icon": "🚬"
+      },
+      {
+        "label": "Frutos secos",
+        "icon": "🥜"
+      },
+      {
+        "label": "Cremoso",
+        "icon": "☕"
+      }
+    ],
+    "bodyAcidity": "Cuerpo denso y cremoso, baja acidez. Perfecto para espresso y métodos de presión.",
+    "roastDate": "14 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=600&q=80",
+    "seo": {
+      "title": "Brasil Espresso - Café para Espresso Intenso | Crescendo Roast",
+      "description": "Café de São Paulo, Brasil. Chocolate amargo, tabaco fino y frutos secos. Ideal para espresso. Puntaje SCA 85.",
+      "keywords": "café brasil, café espresso, café intenso, crescendo roast, café talca, café sao paulo"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "brasil-peaberry",
+    "name": "Brasil Peaberry",
+    "origin": "Brasil",
+    "category": "normal",
+    "variety": "Peaberry",
+    "varietyShort": "Peaberry",
+    "region": "Minas Gerais, Brasil",
+    "regionShort": "Minas Gerais",
+    "originDetail": "Cultivado en la región de Minas Gerais, a altitudes de 900-1200 msnm. Zona de montañas y valles fértiles.",
+    "process": "Natural",
+    "altitude": "900 - 1200 msnm",
+    "altitudeShort": "900-1200",
+    "score": 86,
+    "reviews": 142,
+    "new": false,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$8.000",
+        "priceNum": 8000,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$13.500",
+        "priceNum": 13500,
+        "available": false
+      },
+      {
+        "weight": "1kg",
+        "price": "$25.000",
+        "priceNum": 25000,
+        "available": true
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Chocolate con leche, caramelo, avellanas tostadas.",
+    "fullTastingProfile": "Chocolate con leche, caramelo, avellanas tostadas. Cuerpo medio-alto, acidez suave y dulzura prolongada. Taza equilibrada y reconfortante.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Chocolate con leche",
+        "icon": "🍫"
+      },
+      {
+        "label": "Caramelo",
+        "icon": "🍬"
+      },
+      {
+        "label": "Avellanas",
+        "icon": "🌰"
+      },
+      {
+        "label": "Dulzura",
+        "icon": "✨"
+      }
+    ],
+    "bodyAcidity": "Cuerpo medio-alto, acidez suave y dulzura prolongada. Taza equilibrada y reconfortante.",
+    "roastDate": "12 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80",
+    "seo": {
+      "title": "Brasil Peaberry - Café Suave y Dulce de Minas Gerais | Crescendo Roast",
+      "description": "Café Peaberry de Minas Gerais, Brasil. Chocolate con leche, caramelo y avellanas. Puntaje SCA 86. Envíos en Talca.",
+      "keywords": "café peaberry, café brasil, café minas gerais, café dulce, crescendo roast, café talca"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "colombia-huila",
+    "name": "Colombia Huila",
+    "origin": "Colombia",
+    "category": "intermedio",
+    "variety": "Castillo, Caturra",
+    "varietyShort": "Castillo",
+    "region": "Huila, Colombia",
+    "regionShort": "Huila",
+    "originDetail": "Cultivado en el Departamento del Huila, Colombia, a altitudes de 1700-1900 msnm. Región de montañas volcánicas.",
+    "process": "Natural",
+    "altitude": "1700 - 1900 msnm",
+    "altitudeShort": "1700-1900",
+    "score": 87,
+    "reviews": 67,
+    "new": true,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$8.000",
+        "priceNum": 8000,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$13.500",
+        "priceNum": 13500,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$25.000",
+        "priceNum": 25000,
+        "available": true
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Frutos rojos maduros, caramelo, chocolate, notas florales.",
+    "fullTastingProfile": "Frutos rojos maduros, caramelo, chocolate y notas florales. Cuerpo sedoso, con una acidez cítrica media y final limpio.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Frutos rojos",
+        "icon": "🍒"
+      },
+      {
+        "label": "Caramelo",
+        "icon": "🍬"
+      },
+      {
+        "label": "Chocolate",
+        "icon": "🍫"
+      },
+      {
+        "label": "Notas florales",
+        "icon": "🌸"
+      }
+    ],
+    "bodyAcidity": "Cuerpo sedoso, con una acidez cítrica media y final limpio (notas de acidez cítrica).",
+    "roastDate": "10 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=600&q=80",
+    "seo": {
+      "title": "Colombia Huila - Café de Origen con Frutos Rojos | Crescendo Roast",
+      "description": "Café de Huila, Colombia. Frutos rojos, caramelo y chocolate. Puntaje SCA 87. Café de especialidad en Talca.",
+      "keywords": "café colombia, café huila, café frutos rojos, café de origen, crescendo roast, café talca"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "guatemala-antigua",
+    "name": "Guatemala Antigua",
+    "origin": "Guatemala",
+    "category": "intermedio",
+    "variety": "Bourbon",
+    "varietyShort": "Bourbon",
+    "region": "Antigua, Guatemala",
+    "regionShort": "Antigua",
+    "originDetail": "Cultivado en el valle de Antigua, a altitudes de 1500-1700 msnm. Rodeado de volcanes.",
+    "process": "Lavado",
+    "altitude": "1500 - 1700 msnm",
+    "altitudeShort": "1500-1700",
+    "score": 87,
+    "reviews": 156,
+    "new": false,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$8.000",
+        "priceNum": 8000,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$13.500",
+        "priceNum": 13500,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$25.000",
+        "priceNum": 25000,
+        "available": false
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Chocolate, nuez, caramelo, especias.",
+    "fullTastingProfile": "Chocolate, nuez, caramelo y especias. Cuerpo completo y dulzor natural, ideal para espresso.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Chocolate",
+        "icon": "🍫"
+      },
+      {
+        "label": "Nuez",
+        "icon": "🥜"
+      },
+      {
+        "label": "Caramelo",
+        "icon": "🍬"
+      },
+      {
+        "label": "Especias",
+        "icon": "⭐"
+      }
+    ],
+    "bodyAcidity": "Cuerpo completo, acidez media-baja. Dulzor natural y final especiado.",
+    "roastDate": "11 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80",
+    "seo": {
+      "title": "Guatemala Antigua - Café con Especias y Chocolate | Crescendo Roast",
+      "description": "Café de Antigua, Guatemala. Chocolate, nuez y especias. Puntaje SCA 87. Café de especialidad en Talca.",
+      "keywords": "café guatemala, café antigua, café bourbon, café especias, crescendo roast, café talca"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "costa-rica-tarrazu",
+    "name": "Costa Rica Tarrazú",
+    "origin": "Costa Rica",
+    "category": "intermedio",
+    "variety": "Caturra",
+    "varietyShort": "Caturra",
+    "region": "Tarrazú, Costa Rica",
+    "regionShort": "Tarrazú",
+    "originDetail": "Cultivado en la región de Tarrazú, a altitudes de 1400-1700 msnm. Una de las zonas cafetaleras más prestigiosas de Centroamérica.",
+    "process": "Honey",
+    "altitude": "1400 - 1700 msnm",
+    "altitudeShort": "1400-1700",
+    "score": 88,
+    "reviews": 121,
+    "new": false,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$8.500",
+        "priceNum": 8500,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$14.500",
+        "priceNum": 14500,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$27.000",
+        "priceNum": 27000,
+        "available": true
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Miel, manzana verde, almendra, acidez brillante.",
+    "fullTastingProfile": "Miel, manzana verde y almendra. Proceso honey que entrega dulzor natural y acidez málica refrescante. Taza limpia y compleja.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Miel",
+        "icon": "🍯"
+      },
+      {
+        "label": "Manzana verde",
+        "icon": "🍏"
+      },
+      {
+        "label": "Almendra",
+        "icon": "🌰"
+      },
+      {
+        "label": "Acidez brillante",
+        "icon": "✨"
+      }
+    ],
+    "bodyAcidity": "Cuerpo medio, acidez málica brillante. Final limpio y dulce.",
+    "roastDate": "13 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+    "seo": {
+      "title": "Costa Rica Tarrazú - Café Honey con Miel y Manzana | Crescendo Roast",
+      "description": "Café de Tarrazú, Costa Rica. Proceso honey con miel, manzana verde y almendra. Puntaje SCA 88.",
+      "keywords": "café costa rica, café tarrazú, café honey, café miel, crescendo roast, café talca"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "etiopia-yirgacheffe",
+    "name": "Etiopía Yirgacheffe",
+    "origin": "Etiopía",
+    "category": "premium",
+    "variety": "Heirloom",
+    "varietyShort": "Heirloom",
+    "region": "Yirgacheffe, Etiopía",
+    "regionShort": "Yirgacheffe",
+    "originDetail": "Cultivado en la región de Yirgacheffe, a altitudes de 1900-2200 msnm. Cuna del café.",
+    "process": "Lavado",
+    "altitude": "1900 - 2200 msnm",
+    "altitudeShort": "1900-2200",
+    "score": 89,
+    "reviews": 203,
+    "new": false,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$9.000",
+        "priceNum": 9000,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$15.000",
+        "priceNum": 15000,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$28.000",
+        "priceNum": 28000,
+        "available": true
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Bergamota, limón, té negro, floral.",
+    "fullTastingProfile": "Bergamota, limón, té negro y notas florales. Elegante, aromático y con una acidez cítrica refinada.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Bergamota",
+        "icon": "🍋"
+      },
+      {
+        "label": "Limón",
+        "icon": "🍋"
+      },
+      {
+        "label": "Té negro",
+        "icon": "🫖"
+      },
+      {
+        "label": "Floral",
+        "icon": "🌼"
+      }
+    ],
+    "bodyAcidity": "Cuerpo ligero a medio, acidez cítrica brillante y refinada. Final limpio y persistente.",
+    "roastDate": "13 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80",
+    "seo": {
+      "title": "Etiopía Yirgacheffe - Café Floral con Bergamota | Crescendo Roast",
+      "description": "Café de Yirgacheffe, Etiopía. Bergamota, limón y notas florales. Puntaje SCA 89. Café premium en Talca.",
+      "keywords": "café etiopía, café yirgacheffe, café floral, café bergamota, crescendo roast, café premium talca"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "kenia-aa-nyeri",
+    "name": "Kenia AA Nyeri",
+    "origin": "Kenia",
+    "category": "premium",
+    "variety": "SL28, SL34",
+    "varietyShort": "SL28",
+    "region": "Nyeri, Kenia",
+    "regionShort": "Nyeri",
+    "originDetail": "Cultivado en la región de Nyeri, a altitudes de 1700-1900 msnm. Cooperativa Othaya, una de las más prestigiosas de Kenia.",
+    "process": "Lavado",
+    "altitude": "1700 - 1900 msnm",
+    "altitudeShort": "1700-1900",
+    "score": 90,
+    "reviews": 74,
+    "new": true,
+    "formats": [
+      {
+        "weight": "250g",
+        "price": "$10.000",
+        "priceNum": 10000,
+        "available": true
+      },
+      {
+        "weight": "500g",
+        "price": "$17.500",
+        "priceNum": 17500,
+        "available": true
+      },
+      {
+        "weight": "1kg",
+        "price": "$32.000",
+        "priceNum": 32000,
+        "available": true
+      }
+    ],
+    "selectedFormat": "250g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Grosella negra, tomate, cítrico, vino.",
+    "fullTastingProfile": "Grosella negra, tomate, cítrico y notas vinosas. Acidez vibrante y complejidad excepcional. Una experiencia única.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Grosella negra",
+        "icon": "🍇"
+      },
+      {
+        "label": "Tomate",
+        "icon": "🍅"
+      },
+      {
+        "label": "Cítrico",
+        "icon": "🍊"
+      },
+      {
+        "label": "Vino",
+        "icon": "🍷"
+      }
+    ],
+    "bodyAcidity": "Cuerpo medio, acidez vibrante y compleja. Final vinoso y persistente.",
+    "roastDate": "14 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80",
+    "seo": {
+      "title": "Kenia AA Nyeri - Café Vibrante con Grosella y Vino | Crescendo Roast",
+      "description": "Café de Nyeri, Kenia. Grosella negra, tomate y notas vinosas. Puntaje SCA 90. Café premium exclusivo.",
+      "keywords": "café kenia, café nyeri, café aa, café vibrante, crescendo roast, café premium talca"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "panama-geisha",
+    "name": "Panamá Geisha",
+    "origin": "Panamá",
+    "category": "premium",
+    "variety": "Geisha",
+    "varietyShort": "Geisha",
+    "region": "Boquete, Panamá",
+    "regionShort": "Boquete",
+    "originDetail": "Cultivado en las tierras altas de Boquete, a altitudes de 1600-1800 msnm. La variedad más codiciada del mundo.",
+    "process": "Honey",
+    "altitude": "1600 - 1800 msnm",
+    "altitudeShort": "1600-1800",
+    "score": 92,
+    "reviews": 45,
+    "new": true,
+    "formats": [
+      {
+        "weight": "100g",
+        "price": "$12.000",
+        "priceNum": 12000,
+        "available": true
+      },
+      {
+        "weight": "250g",
+        "price": "$25.000",
+        "priceNum": 25000,
+        "available": false
+      },
+      {
+        "weight": "500g",
+        "price": "$48.000",
+        "priceNum": 48000,
+        "available": false
+      }
+    ],
+    "selectedFormat": "100g",
+    "selectedPresentation": "En grano",
+    "tastingNotes": "Jazmín, durazno, miel, té, bergamota.",
+    "fullTastingProfile": "Jazmín, durazno, miel y bergamota. La joya de la corona. Taza elegante, compleja y con un final largo y dulce.",
+    "tastingNotesDetailed": [
+      {
+        "label": "Jazmín",
+        "icon": "🌸"
+      },
+      {
+        "label": "Durazno",
+        "icon": "🍑"
+      },
+      {
+        "label": "Miel",
+        "icon": "🍯"
+      },
+      {
+        "label": "Bergamota",
+        "icon": "🍋"
+      }
+    ],
+    "bodyAcidity": "Cuerpo sedoso y ligero, acidez brillante. Final largo, floral y dulce.",
+    "roastDate": "10 Oct 2026",
+    "image": "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=600&q=80",
+    "seo": {
+      "title": "Panamá Geisha - El Café Más Exclusivo del Mundo | Crescendo Roast",
+      "description": "Café Geisha de Boquete, Panamá. Jazmín, durazno y bergamota. Puntaje SCA 92. La variedad más codiciada del mundo.",
+      "keywords": "café panamá, café geisha, café exclusivo, café premium, crescendo roast, café talca"
+    }
+  }
+]
