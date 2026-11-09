@@ -78,7 +78,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>
+   <div :key="$route.fullPath">
     <!-- Asegúrate de que tu HeroSection tenga un <h1> semántico -->
     <SectionsHeroSection />
     <SectionsCafeBanner />
