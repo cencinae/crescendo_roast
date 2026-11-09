@@ -1,8 +1,10 @@
 <script setup>
 const route = useRoute()
-const { getSocials } = useConfig()
+const { getSocials, getWhatsAppNumber } = useConfig()
 
 const socials = computed(() => getSocials())
+const whatsappUrl = computed(() => `https://wa.me/${getWhatsAppNumber()}`)
+
 
 const getAnchorLink = (anchor) => {
   const isHome = route.path === '/'
@@ -50,7 +52,7 @@ const getAnchorLink = (anchor) => {
           <ul class="space-y-3">
             <li><a :href="getAnchorLink('horarios')" class="text-white/70 hover:text-ember-400 transition-colors">Horarios</a></li>
             <li><a :href="getAnchorLink('ubicacion')" class="text-white/70 hover:text-ember-400 transition-colors">Ubicación</a></li>
-            <li><a href="https://wa.me/56931893121" target="_blank" class="text-white/70 hover:text-ember-400 transition-colors">WhatsApp</a></li>
+            <li><a :href="whatsappUrl" target="_blank" class="text-white/70 hover:text-ember-400 transition-colors">WhatsApp</a></li>
           </ul>
         </div>
       </div>

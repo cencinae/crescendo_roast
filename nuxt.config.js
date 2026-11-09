@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     adminPassword: process.env.ADMIN_PASSWORD,
     adminToken: process.env.ADMIN_TOKEN,
     public: {
-      siteUrl: process.env.SITE_URL || 'http://localhost:3000'
+      //siteUrl: process.env.SITE_URL || 'http://localhost:3000'
     }
   },
 

@@ -4,19 +4,17 @@ export const useConfig = () => {
 
   const loadConfig = async () => {
     if (config.value) return config.value
-    
     try {
       const { data } = await useFetch('/api/config.json')
-      if (data.value) {
-        config.value = data.value
-      }
+      if (data.value) config.value = data.value
     } catch (error) {
       console.error('Error cargando configuración:', error)
     }
-    
     return config.value
   }
 
+  // 🆕 Nuevos helpers
+  const getSiteUrl = () => config.value?.siteUrl || 'https://crescendoroast.cl'
   const getWhatsAppNumber = () => config.value?.whatsapp?.number || '56931893121'
   
   const getWhatsAppLink = (message) => {
@@ -30,26 +28,16 @@ export const useConfig = () => {
     return subtotal >= threshold ? 0 : cost
   }
 
-  const getPaymentMethods = () => {
-    return config.value?.paymentMethods || []
-  }
-
-  const getAvailablePaymentMethods = () => {
-    return getPaymentMethods().filter(m => m.available !== false)
-  }
-
-  const getSocials = () => {
-    return config.value?.socials || []
-  }
-
-  const getBankAccount = () => {
-    return config.value?.bankAccount || null
-  }
+  const getPaymentMethods = () => config.value?.paymentMethods || []
+  const getAvailablePaymentMethods = () => getPaymentMethods().filter(m => m.available !== false)
+  const getSocials = () => config.value?.socials || []
+  const getBankAccount = () => config.value?.bankAccount || null
 
   return {
     config,
     loadConfig,
-    getWhatsAppNumber,
+    getSiteUrl,          // 🆕
+    getWhatsAppNumber,   // 🆕
     getWhatsAppLink,
     getShippingCost,
     getPaymentMethods,

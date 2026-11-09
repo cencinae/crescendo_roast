@@ -3,7 +3,7 @@ export const useCheckout = () => {
   const { cart, cartSubtotal } = useCart()
   const { closeCheckout, closeCart, openThankYou } = useModals() // 🆕 openThankYou
   const { showToast } = useToast()
-  const { config } = useConfig()
+  const { config, getWhatsAppNumber } = useConfig() 
 
   const form = ref({
     nombre: '', celular: '', tipoEntrega: 'retiro', direccion: '', numeroCasa: '',
@@ -121,7 +121,7 @@ export const useCheckout = () => {
     }
 
     // Abrir WhatsApp
-    const whatsappNumber = config.value?.whatsapp?.number || '56931893121'
+    const whatsappNumber = getWhatsAppNumber()
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank')
     
     // Limpiar formulario y carrito

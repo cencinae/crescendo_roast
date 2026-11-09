@@ -5,10 +5,10 @@ const props = defineProps({
 })
 
 const { showToast } = useToast()
-const config = useRuntimeConfig()
+const { getSiteUrl } = useConfig()
 
 // Construir la URL dinámica usando la variable de entorno
-const productUrl = computed(() => `${config.public.siteUrl}/cafes/${props.slug}`)
+const productUrl = computed(() => `${getSiteUrl()}/cafes/${props.slug}`)
 
 const shareMessage = computed(() => {
   return `¡Mira este café de Crescendo Roast! ${props.productName} - ${productUrl.value}`

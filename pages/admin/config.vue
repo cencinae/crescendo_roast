@@ -56,17 +56,39 @@ onMounted(loadConfig)
     </div>
 
     <form v-else-if="config" @submit.prevent="saveConfig" class="space-y-6">
-      
-      <!-- 1. WhatsApp -->
+
+      <!-- 1. Configuración General -->
       <div class="bg-white rounded-2xl p-6 border border-black/5">
         <h2 class="font-display text-xl text-black mb-4 flex items-center gap-2">
-          <i class="fa-brands fa-whatsapp text-forest-700"></i> WhatsApp
+          <i class="fa-solid fa-globe text-forest-700"></i> Configuración General
         </h2>
         <div class="grid md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-medium text-black/70 mb-2">Número (con código de país)</label>
-            <input v-model="config.whatsapp.number" type="text" class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700" placeholder="56912345678" />
+            <label class="block text-xs font-medium text-black/70 mb-2">URL del Sitio Web</label>
+            <input 
+              v-model="config.siteUrl" 
+              type="url" 
+              class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700" 
+              placeholder="https://crescendoroast.cl" 
+            />
+            <p class="text-xs text-black/50 mt-1">Se usa para generar links de compartir y SEO.</p>
           </div>
+          <div>
+            <label class="block text-xs font-medium text-black/70 mb-2">Número de WhatsApp (con código de país)</label>
+            <input 
+              v-model="config.whatsapp.number" 
+              type="text" 
+              class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700" 
+              placeholder="56912345678" 
+            />
+            <p class="text-xs text-black/50 mt-1">Ej: 56931893121 (sin el +)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 1. WhatsApp -->
+      <div class="bg-white rounded-2xl p-6 border border-black/5">
+        <div class="grid md:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-medium text-black/70 mb-2">Mensaje por defecto</label>
             <input v-model="config.whatsapp.defaultMessage" type="text" class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700" />
