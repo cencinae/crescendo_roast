@@ -22,3 +22,11 @@ logs
 .env
 .env.*
 !.env.example
+
+# Datos dinámicos del admin (no subir a GitHub)
+server/data/
+public/uploads/
+
+# Mantener la estructura de carpetas vacías en el repo
+!server/data/.gitkeep
+!public/uploads/.gitkeep
