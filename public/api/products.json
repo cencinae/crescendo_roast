@@ -2,6 +2,7 @@
   {
     "id": 1,
     "slug": "crescendo-blend",
+    "status": "borrador",
     "name": "Crescendo Blend",
     "origin": "Blend",
     "category": "normal",
@@ -70,6 +71,7 @@
   {
     "id": 2,
     "slug": "brasil-espresso",
+    "status": "publicado",
     "name": "Brasil Espresso",
     "origin": "Brasil",
     "category": "normal",
@@ -138,6 +140,7 @@
   {
     "id": 3,
     "slug": "brasil-peaberry",
+    "status": "publicado",
     "name": "Brasil Peaberry",
     "origin": "Brasil",
     "category": "normal",
@@ -206,6 +209,7 @@
   {
     "id": 4,
     "slug": "colombia-huila",
+    "status": "publicado",
     "name": "Colombia Huila",
     "origin": "Colombia",
     "category": "intermedio",
@@ -274,6 +278,7 @@
   {
     "id": 5,
     "slug": "guatemala-antigua",
+    "status": "publicado",
     "name": "Guatemala Antigua",
     "origin": "Guatemala",
     "category": "intermedio",
@@ -342,6 +347,7 @@
   {
     "id": 6,
     "slug": "costa-rica-tarrazu",
+    "status": "publicado",
     "name": "Costa Rica Tarrazú",
     "origin": "Costa Rica",
     "category": "intermedio",
@@ -410,6 +416,7 @@
   {
     "id": 7,
     "slug": "etiopia-yirgacheffe",
+    "status": "publicado",
     "name": "Etiopía Yirgacheffe",
     "origin": "Etiopía",
     "category": "premium",
@@ -478,6 +485,7 @@
   {
     "id": 8,
     "slug": "kenia-aa-nyeri",
+    "status": "publicado",
     "name": "Kenia AA Nyeri",
     "origin": "Kenia",
     "category": "premium",
@@ -546,6 +554,7 @@
   {
     "id": 9,
     "slug": "panama-geisha",
+    "status": "publicado",
     "name": "Panamá Geisha",
     "origin": "Panamá",
     "category": "premium",

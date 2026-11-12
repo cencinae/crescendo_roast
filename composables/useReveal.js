@@ -8,43 +8,69 @@ export const useReveal = () => {
   const initObserver = () => {
     if (!process.client) return
     
-    // 1. Limpiar el observer anterior para evitar duplicados en producción
+    // Limpiar el observer anterior
     if (observer) {
       observer.disconnect()
     }
 
-    // 2. Crear el nuevo observer
+    // Crear el nuevo observer
     observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible')
-          // Dejar de observar este elemento específico para ahorrar rendimiento
           observer.unobserve(entry.target)
         }
       })
-    }, { threshold: 0.1 })
+    }, { 
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' // Margen para activar un poco antes
+    })
 
-    // 3. nextTick garantiza que Vue ya terminó de pintar el nuevo DOM de la ruta
+    // Esperar a que Vue termine de renderizar y el scroll al hash se complete
     nextTick(() => {
-      document.querySelectorAll('.reveal').forEach(el => {
-        if (!el.classList.contains('visible')) {
-          observer.observe(el)
-        }
-      })
+      setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => {
+          if (!el.classList.contains('visible')) {
+            observer.observe(el)
+          }
+        })
+      }, 150) // Delay para que el scroll al hash termine
     })
   }
 
-  // Ejecutar al montar el componente
   onMounted(() => {
     initObserver()
   })
 
-  // Volver a ejecutar CADA VEZ que cambia la ruta (ej: clic en el logo)
-  watch(() => route.path, () => {
+  // Observar cambios en la ruta COMPLETA (path + hash)
+  watch(() => route.fullPath, () => {
     initObserver()
   })
 
-  // Limpiar al salir del componente para evitar fugas de memoria
+  // También observar cuando el usuario hace scroll manualmente
+  onMounted(() => {
+    if (!process.client) return
+    
+    let scrollTimeout
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(() => {
+        // Re-inicializar observer al hacer scroll para capturar elementos que entran al viewport
+        if (observer) {
+          document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+            observer.observe(el)
+          })
+        }
+      }, 100)
+    }
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    onBeforeUnmount(() => {
+      window.removeEventListener('scroll', handleScroll)
+    })
+  })
+
   onBeforeUnmount(() => {
     if (observer) {
       observer.disconnect()

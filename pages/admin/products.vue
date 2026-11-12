@@ -8,6 +8,7 @@ const products = ref([])
 const loading = ref(true)
 const searchQuery = ref('')
 const filterCategory = ref('all')
+const filterStatus = ref('all')
 
 const loadProducts = async () => {
   loading.value = true
@@ -27,6 +28,10 @@ const getCategoryName = (catId) => {
     premium: 'Café Exótico' 
   }
   return names[catId] || catId
+}
+
+const getStatusName = (status) => {
+  return status === 'publicado' ? 'Publicado' : 'Borrador'
 }
 
 const deleteProduct = async (id) => {
@@ -49,7 +54,8 @@ const filteredProducts = computed(() => {
     const matchSearch = p.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
                        p.origin.toLowerCase().includes(searchQuery.value.toLowerCase())
     const matchCategory = filterCategory.value === 'all' || p.category === filterCategory.value
-    return matchSearch && matchCategory
+    const matchStatus = filterStatus.value === 'all' || p.status === filterStatus.value
+    return matchSearch && matchCategory && matchStatus
   })
 })
 
@@ -85,6 +91,11 @@ onMounted(loadProducts)
         <option value="intermedio">Café Especial</option>
         <option value="premium">Café Exótico</option>
       </select>
+      <select v-model="filterStatus" class="px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700">
+        <option value="all">Todos los estados</option>
+        <option value="publicado">Publicados</option>
+        <option value="borrador">Borradores</option>
+      </select>
     </div>
     
     <!-- Lista -->
@@ -105,11 +116,13 @@ onMounted(loadProducts)
             <th class="text-left px-6 py-3 text-xs font-semibold text-black/60 uppercase">Categoría</th>
             <th class="text-left px-6 py-3 text-xs font-semibold text-black/60 uppercase">Precio</th>
             <th class="text-left px-6 py-3 text-xs font-semibold text-black/60 uppercase">SCA</th>
+            <th class="text-left px-6 py-3 text-xs font-semibold text-black/60 uppercase">Estado</th>
             <th class="text-right px-6 py-3 text-xs font-semibold text-black/60 uppercase">Acciones</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-black/5">
           <tr v-for="product in filteredProducts" :key="product.id" class="hover:bg-gray-50">
+            <!-- Columna 1: Producto -->
             <td class="px-6 py-4">
               <div class="flex items-center gap-3">
                 <NuxtImg :src="product.image" class="w-12 h-12 rounded-lg object-cover" />
@@ -119,13 +132,36 @@ onMounted(loadProducts)
                 </div>
               </div>
             </td>
+            
+            <!-- Columna 2: Categoría -->
             <td class="px-6 py-4">
               <span class="px-2 py-1 rounded-full text-xs font-medium bg-forest-50 text-forest-700">
                 {{ getCategoryName(product.category) }}
               </span>
             </td>
+            
+            <!-- Columna 3: Precio -->
             <td class="px-6 py-4 text-sm text-black">{{ product.formats[0]?.price }}</td>
+            
+            <!-- Columna 4: SCA -->
             <td class="px-6 py-4 text-sm text-black font-mono">{{ product.score }}</td>
+            
+            <!-- Columna 5: Estado -->
+            <td class="px-6 py-4">
+              <span 
+                :class="[
+                  'px-2 py-1 rounded-full text-xs font-medium inline-flex items-center gap-1',
+                  product.status === 'publicado' 
+                    ? 'bg-forest-50 text-forest-700' 
+                    : 'bg-amber-50 text-amber-700'
+                ]"
+              >
+                <i :class="product.status === 'publicado' ? 'fa-solid fa-circle-check' : 'fa-solid fa-file-pen'" class="text-[10px]"></i>
+                {{ getStatusName(product.status) }}
+              </span>
+            </td>
+            
+            <!-- Columna 6: Acciones -->
             <td class="px-6 py-4 text-right">
               <div class="flex items-center justify-end gap-2">
                 <NuxtLink :to="`/admin/products-${product.id}`" class="w-9 h-9 rounded-lg bg-forest-50 hover:bg-forest-100 flex items-center justify-center text-forest-700 transition-colors">

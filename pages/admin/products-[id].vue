@@ -127,13 +127,56 @@ onMounted(loadProduct)
             <label class="block text-xs font-medium text-black/70 mb-2">Puntaje SCA</label>
             <input v-model.number="form.score" type="number" min="80" max="100" class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700" />
           </div>
+
           <div class="flex items-center gap-2 pt-6">
             <input v-model="form.new" type="checkbox" id="isNew" class="w-4 h-4 rounded" />
             <label for="isNew" class="text-sm text-black/70">Marcar como nuevo</label>
           </div>
         </div>
       </div>
-      
+          
+          <!-- 🆕 Selector de Estado -->
+          <div class="md:col-span-2">
+            <label class="block text-xs font-medium text-black/70 mb-2">Estado del producto</label>
+            <div class="grid grid-cols-2 gap-3">
+              <label 
+                :class="[
+                  'flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all',
+                  form.status === 'borrador' 
+                    ? 'border-amber-500 bg-amber-50' 
+                    : 'border-black/10 bg-white hover:border-black/20'
+                ]"
+              >
+                <input v-model="form.status" type="radio" value="borrador" class="w-4 h-4 text-amber-600 focus:ring-amber-500" />
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-file-pen text-amber-600"></i>
+                  <div>
+                    <div class="text-sm font-semibold text-black">Borrador</div>
+                    <div class="text-xs text-black/50">No visible en el sitio</div>
+                  </div>
+                </div>
+              </label>
+              
+              <label 
+                :class="[
+                  'flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all',
+                  form.status === 'publicado' 
+                    ? 'border-forest-700 bg-forest-50' 
+                    : 'border-black/10 bg-white hover:border-black/20'
+                ]"
+              >
+                <input v-model="form.status" type="radio" value="publicado" class="w-4 h-4 text-forest-700 focus:ring-forest-700" />
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-forest-700"></i>
+                  <div>
+                    <div class="text-sm font-semibold text-black">Publicado</div>
+                    <div class="text-xs text-black/50">Visible en el sitio web</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+               
       <!-- Imagen -->
       <div class="bg-white rounded-2xl p-6 border border-black/5">
         <h2 class="font-display text-xl text-black mb-4 flex items-center gap-2">
@@ -166,12 +209,12 @@ onMounted(loadProduct)
           </div>
           <div>
             <label class="block text-xs font-medium text-black/70 mb-2">Proceso</label>
-            <select v-model="form.process" class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm">
-              <option>Lavado</option>
-              <option>Natural</option>
-              <option>Honey</option>
-              <option>Mixto</option>
-            </select>
+            <input 
+              v-model="form.process" 
+              type="text" 
+              class="w-full px-4 py-2.5 bg-gray-50 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-forest-700" 
+              placeholder="Ej: Lavado, Natural, Honey, Anaeróbico..." 
+            />
           </div>
           <div>
             <label class="block text-xs font-medium text-black/70 mb-2">Altitud</label>
