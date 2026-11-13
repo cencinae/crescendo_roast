@@ -21,8 +21,19 @@ export default defineNuxtConfig({
         { 
           rel: 'stylesheet', 
           href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' 
+        },
+        // 🆕 Favicon
+        { 
+          rel: 'icon', 
+          type: 'image/png', 
+          href: '/favicon.png' 
+        },
+        // 🆕 Favicon para Apple (iPhone/iPad)
+        {
+          rel: 'apple-touch-icon',
+          href: '/favicon.png'
         }
-      ]
+      ],
     }
   },
 
