@@ -2,16 +2,21 @@
 export const useProducts = () => {
   const products = useState('products', () => [])
   const activeCategory = useState('activeCategory', () => 'all')
-  const selectedFormats = useState('selectedFormats', () => ({}))
 
   const loadProducts = async () => {
     try {
       const { data } = await useFetch('/api/products.json')
       if (data.value) {
-        // 🆕 Filtrar solo productos publicados (o sin status = publicado por defecto)
         products.value = data.value.filter(p => {
           if (!p.status) return true // Retrocompatibilidad
           return p.status === 'publicado'
+        }).map(p => {
+          // 🆕 CRÍTICO: Asegurar que cada producto tenga un formato seleccionado por defecto
+          if (!p.selectedFormat) {
+            const primerDisponible = p.formats.find(f => f.available !== false)
+            p.selectedFormat = primerDisponible ? primerDisponible.weight : (p.formats[0]?.weight || '')
+          }
+          return p
         })
       }
     } catch (error) {
@@ -19,8 +24,12 @@ export const useProducts = () => {
     }
   }
 
+  // 🆕 CRÍTICO: Actualizar directamente la propiedad del objeto para que la reactividad funcione
   const selectFormat = (productId, weight) => {
-    selectedFormats.value[productId] = weight
+    const product = products.value.find(p => p.id === productId)
+    if (product) {
+      product.selectedFormat = weight
+    }
   }
 
   // Productos filtrados por categoría
@@ -39,7 +48,6 @@ export const useProducts = () => {
   return {
     products,
     activeCategory,
-    selectedFormats,
     filteredProducts,
     categories,
     loadProducts,

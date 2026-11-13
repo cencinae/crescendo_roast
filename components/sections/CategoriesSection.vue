@@ -132,7 +132,7 @@ const displayedProducts = computed(() => {
                     :value="fmt.weight"
                     :disabled="fmt.available === false"
                   >
-                    {{ fmt.weight }} · {{ fmt.price }}{{ fmt.available === false ? ' (Agotado)' : '' }}
+                    {{ fmt.weight }} · {{ fmt.price }}{{ fmt.available === false ? ' (No disponible)' : '' }}
                   </option>
                 </select>
               </div>
@@ -162,7 +162,7 @@ const displayedProducts = computed(() => {
                   </div>
                   <div v-if="fmt.available === false" class="absolute inset-0 flex items-center justify-center">
                     <span class="bg-red-500/90 text-white text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full rotate-[-8deg]">
-                      Agotado
+                      No disponible
                     </span>
                   </div>
                 </button>

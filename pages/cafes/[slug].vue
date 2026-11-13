@@ -135,7 +135,7 @@ onMounted(async () => {
                 </div>
                 <div v-if="fmt.available === false" class="absolute inset-0 flex items-center justify-center">
                   <span class="bg-red-500/90 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full rotate-[-8deg]">
-                    Agotado
+                    No disponible
                   </span>
                 </div>
               </button>
